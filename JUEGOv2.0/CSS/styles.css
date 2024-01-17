@@ -157,12 +157,10 @@ div .dropzone p {
 }
 
 div .dropzone img {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     cursor: pointer;
-    border-radius: 50%;
-    object-fit: cover;
-    /* Asegura que la imagen cubra el contenedor sin deformarse */
+    border-radius: 5px;
     z-index: 999;
 }
 

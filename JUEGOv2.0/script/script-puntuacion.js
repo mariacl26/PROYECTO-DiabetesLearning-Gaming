@@ -108,7 +108,7 @@ window.onload = function () {
         puntuacion++
         scoreElement.textContent = puntuacion
       } else {
-        resultElement.textContent = 'Respuesta incorrecta. La próxima será.'
+        resultElement.innerHTML = 'Respuesta incorrecta.<br> En el segundo icono por la izquierda tienes información sobre los elementos de las preguntas'
         resultElement.style.color = 'red'
 
         // resetButton.style.display = "inline-block";
@@ -123,6 +123,8 @@ window.onload = function () {
       }
     } else {
       resultElement.textContent = '¡Por favor, arrastra una de las respuestas!'
+      resultElement.style.color = '#2980B9';
+
     }
   })
 

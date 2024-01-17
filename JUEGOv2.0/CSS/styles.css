@@ -244,12 +244,15 @@ div .dropzone img {
 
 @media only screen and (max-width: 560px) {
     .puntos {
-        max-width: 398px;
+        max-width: 349px;
     }
 
+    .pregunta{
+        font-size: 18px;
+    }
     .container {
         font-size: 16px;
-        max-width: 400px;
+        max-width: 350px;
     }
 
     .opciones img {

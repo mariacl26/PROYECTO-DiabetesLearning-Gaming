@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+
+/* Estilos para los nuevos elementos con la paleta de colores */
+:root {
+    /* Tipos de fuentes */
+    --fuente-primaria: 'Fredoka', sans-serif;
+
+    /* Colores de fuentes */
+    --color-primario: #f2f2f2;
+    --color-texto-primario: #333333;
+    --color-borde-primario: #1a5276;
+    --color-texto-contenido: #ffffff;
+
+    /* Fondo texto con transparencia */
+    --secondario-color: #7ac7e583;
+
+    /* Hover para los enlaces del header */
+    --hover-secondario-color: #1a5276;
+
+    /* Botones color */
+    --boton-color: #2980b9;
+
+    /* Hover boton */
+    --boton-hover-color: #1a5276;
+
+}
+
+* {
+    font-family: var(--fuente-primaria);
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para los nuevos elementos */
+header {
+    background-color: var(--boton-color);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    font-size: 2.5em;
+    color: var(--color-primario);
+    text-decoration: none;
+}
+
+.h2 {
+    color: var(--color-primario);
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: var(--fuente-primaria);
+    color: var(--color-texto-primario);
+}
+
+.curso {
+    background-color: var(--color-primario);
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+.btn1 {
+    font-family: var(--fuente-primaria);
+
+}
+
+.circle {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    background-color: var(--color-borde-primario);
+    color: var(--color-texto-contenido);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.text-justify {
+    text-align: justify;
+    flex-grow: 1;
+    margin: 10px;
+}
+
+.lecciones {
+    display: flex;
+    margin-top: 20px;
+
+}
+
+.column {
+    flex: 1;
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 0;
+    color: var(--boton-color);
+}
+
+.redondo {
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    width: 95%;
+    display: block;
+    text-align: center;
+    background-color: var(--boton-color);
+    color: var(--color-texto-contenido);
+    font-family: var(--fuente-primaria);
+    border: none;
+
+
+}
+
+.redondo:hover {
+    background-color: var(--boton-hover-color);
+}
+
+/*FOOTER*/
+.footer {
+    background-color: var(--color-texto-primario);
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.footer-seccion {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-seccion h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: var(--color-texto-contenido);
+}
+
+.footer-seccion p {
+    color: #a4a3a3;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.footer-seccion ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-seccion ul li {
+    margin-bottom: 8px;
+}
+
+.footer-seccion ul li a {
+    font-size: 1.2em;
+    text-decoration: none;
+    color: var(--hover-secondario-color);
+    transition: color 0.3s ease;
+}
+
+.footer-seccion ul li a:hover {
+    color: var(--boton-color);
+}
+
+/* Media Query para dispositivos con un ancho máximo de 767px (pantallas móviles) */
+@media screen and (max-width: 767px) {
+    header {
+        font-size: 0.6em;
+
+    }
+
+    .container {
+        width: 100%;
+
+    }
+
+    .curso {
+        padding: 10px;
+        width: 95%;
+    }
+
+    h3 {
+        font-size: 1em;
+    }
+
+
+    .text-justify {
+        width: 90%;
+        align-items: center;
+    }
+
+    .circle {
+        width: 150px;
+        /* Reducir el tamaño del círculo */
+        height: 150px;
+    }
+
+    .redondo {
+        padding: 8px 16px;
+        /* Reducir el padding de los botones */
+        font-size: 1em;
+        /* Reducir el tamaño de fuente de los botones */
+        width: 90%;
+        /* Ajustar el ancho de los botones */
+    }
+
+    .lecciones {
+        flex-direction: column;
+        /* Cambiar la dirección de las columnas a una columna única */
+    }
+
+    .column {
+        text-align: center;
+        margin: 10px 0;
+        /* Añadir un espacio entre las columnas */
+    }
+}

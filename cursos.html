@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>DiabetesLearning</title>
+        <link rel="stylesheet" href="./estilos/variables.css">
+        <link rel="stylesheet" href="./estilos/contenido.css">
+        <link rel="stylesheet" href="./estilos/general.css">
+        <!-- <link rel="stylesheet" href="./estilos/noticias.css"> -->
+        <link rel="icon" href="./fotos/analisis.svg" type="image/x-icon">
+        <style>
+            /* Estilos para la barra de búsqueda */
+            .search-bar {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 20px;
+            }
+
+            .search-bar input[type="text"] {
+                padding: 8px;
+                width: 30%;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                margin-right: 10px;
+            }
+
+            .search-bar input[type="submit"] {
+                padding: 8px 15px;
+                background-color: #1e2763;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            .search-bar input[type="submit"]:hover {
+                background-color: #4856b4;
+            }
+
+            /* Estilos para la sección de cursos */
+            .cursos {
+                padding: 40px 20px;
+                text-align: center;
+            }
+
+            .cursos h2 {
+                font-size: 2em;
+                margin-bottom: 20px;
+            }
+
+            .lista-cursos {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+            }
+
+            .curso {
+                background-color: #f5f5f5;
+                padding: 20px;
+                border-radius: 8px;
+                width: 300px;
+                text-align: left;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .curso h3 {
+                font-size: 1.5em;
+                margin-bottom: 10px;
+            }
+
+            .curso p {
+                color: #666;
+            }
+
+            .curso a {
+                display: inline-block;
+                padding: 8px 16px;
+                background-color: #1e2763;
+                color: white;
+                text-decoration: none;
+                border-radius: 5px;
+                transition: background-color 0.3s ease;
+            }
+
+            .curso a:hover {
+                background-color: #4856b4;
+            }
+
+            .logo a {
+                text-decoration: none;
+                color: black;
+            }
+        </style>
+    </head>
+
+<body>
+    <div class="contenedor">
+        <header>
+            <div class="logo">
+                <img src="./fotos/analisis.svg" width="30" height="30" viewBox="0 0 24 24"
+                    alt="Logo de DiabetesLearning">
+                <a href="./index.html">DiabetesLearning</a>
+            </div>
+
+            <nav>
+                <ul class="opciones">
+                    <li>
+                        <div class="celda">
+                            <div class="velo"></div>
+                            <div class="info"><a href="./index.html">Inicio</a></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="celda">
+                            <div class="velo"></div>
+                            <div class="info"><a href="./noticias.html">Noticias</a></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="celda">
+                            <div class="velo"></div>
+                            <div class="info"><a href="./sobre-nosotros.html">Sobre nosotros</a></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="celda">
+                            <div class="velo"></div>
+                            <div class="info"><a href="./registro.html">Registro</a></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="celda">
+                            <div class="velo"></div>
+                            <div class="info"><a href="./JUEGOv2.0/bienvenida.html">Juego</a></div>
+                        </div>
+                    </li>
+                </ul>
+
+            </nav>
+
+        </header>
+
+        <div class="search-bar">
+            <input type="text" id="busqueda" placeholder="Buscar...">
+            <!-- llamar a funcion en js -->
+            <input type="submit" value="Buscar">
+        </div>
+        <section class="cursos">
+            <h2>Nuestros Cursos</h2>
+            <div class="lista-cursos">
+                <div class="lista-cursos" id="lista-cursos">
+
+                    <div class="curso">
+                        <h3>Diabetes Tipo 1: Fundamentos</h3>
+                        <p>Este curso aborda los conceptos básicos de la Diabetes Tipo 1, incluyendo...</p>
+                        <a href="./cursos/curso1.html">Detalles del Curso</a>
+                    </div>
+                    <div class="curso">
+                        <h3>Diabetes Tipo 2: Gestión</h3>
+                        <p>Descubre estrategias efectivas para gestionar la Diabetes Tipo 2, incluyendo...</p>
+                        <a href="./cursos/curso2.html">Detalles del Curso</a>
+                    </div>
+                    <div class="curso">
+                        <h3>Nutrición y Carbohidratos</h3>
+                        <p>Aprende sobre la nutrición específica para personas con diabetes y el control de...</p>
+                        <a href="#">Detalles del Curso</a>
+                    </div>
+                    <div class="curso">
+                        <h3>Uso del Glucagón</h3>
+                        <p>Este curso se centra en el uso y administración del glucagón, un aspecto clave...</p>
+                        <a href="#">Detalles del Curso</a>
+                    </div>
+                    <div class="curso">
+                        <h3>Tecnología: CGM y Asa Cerrado</h3>
+                        <p>Explora la tecnología moderna para el monitoreo continuo de glucosa y sistemas de...</p>
+                        <a href="#">Detalles del Curso</a>
+                    </div>
+                    <div class="curso">
+                        <h3>Índice Glucémico y Alimentación</h3>
+                        <p>Comprende cómo los alimentos afectan el nivel de glucosa en sangre y la importancia...</p>
+                        <a href="#">Detalles del Curso</a>
+                    </div>
+                    <div class="curso">
+                        <h3>Herramientas para el Autocuidado</h3>
+                        <p>Descubre diversas herramientas y técnicas que pueden ayudarte en el autocuidado diario...</p>
+                        <a href="#">Detalles del Curso</a>
+                    </div>
+                    <div class="curso">
+                        <h3>Prevención de Complicaciones</h3>
+                        <p>Aprende estrategias para prevenir y controlar las posibles complicaciones asociadas...</p>
+                        <a href="#">Detalles del Curso</a>
+                    </div>
+                </div>
+        </section>
+    </div>
+    <footer class="footer">
+        <div class="footer-seccion">
+            <h3>Acerca de Nosotros</h3>
+            <p>Descubre nuestra misión y visión en DiabetesLearning. Conoce al equipo que trabaja para brindarte
+                información relevante y útil sobre el manejo de la diabetes.</p>
+        </div>
+
+        <div class="footer-seccion">
+            <h3>Contáctanos</h3>
+            <p>¿Tienes preguntas o comentarios? ¡No dudes en contactarnos! Estamos aquí para ayudarte en tu viaje
+                hacia un mejor control de la diabetes.</p>
+            <p> +34 658 23 15 42 </p>
+            <p> diabeteslearning@gmail.com</p>
+        </div>
+
+        <div class="footer-seccion">
+            <h3>Enlaces</h3>
+            <ul>
+                <li><a href="./politica-privacidad.html">Política de Privacidad</a></li>
+                <li><a href="./terminos-cond.html">Términos y Condiciones</a></li>
+             </ul>
+        </div>
+    </footer>
+
+    <script>
+        var cursos = [
+            {
+                titulo: 'Diabetes Tipo 1: Fundamentos',
+                descripcion: 'Este curso aborda los conceptos básicos de la Diabetes Tipo 1, incluyendo la fisiopatología, tratamiento y recomendaciones de estilo de vida.'
+            },
+            {
+                titulo: 'Diabetes Tipo 2: Gestión',
+                descripcion: 'Descubre estrategias efectivas para gestionar la Diabetes Tipo 2, incluyendo consejos nutricionales, manejo de medicamentos y actividades físicas recomendadas.'
+            },
+            {
+                titulo: 'Nutrición y Carbohidratos',
+                descripcion: 'Aprende sobre la nutrición específica para personas con diabetes, cómo contar carbohidratos y planificar comidas saludables.'
+            },
+            {
+                titulo: 'Uso del Glucagón',
+                descripcion: 'Este curso se centra en el uso y administración del glucagón, un aspecto clave en el manejo de situaciones de hipoglucemia severa.'
+            },
+            {
+                titulo: 'Tecnología: CGM y Asa Cerrado',
+                descripcion: 'Explora la tecnología moderna para el monitoreo continuo de glucosa (CGM) y sistemas de lazo cerrado (Asa Cerrado) para el control avanzado de la diabetes.'
+            },
+            {
+                titulo: 'Índice Glucémico y Alimentación',
+                descripcion: 'Comprende cómo los alimentos afectan el nivel de glucosa en sangre, el índice glucémico y estrategias de alimentación para el control glucémico.'
+            },
+            {
+                titulo: 'Herramientas para el Autocuidado',
+                descripcion: 'Descubre diversas herramientas y técnicas que pueden ayudarte en el autocuidado diario, desde aplicaciones hasta seguimiento de datos y más.'
+            },
+            {
+                titulo: 'Prevención de Complicaciones',
+                descripcion: 'Aprende estrategias para prevenir y controlar las posibles complicaciones asociadas con la diabetes, desde cuidados de los pies hasta la salud ocular.'
+            }
+        ];
+
+        function mostrarCursos(cursosMostrados) {
+            var listaCursos = document.getElementById('lista-cursos');
+            listaCursos.innerHTML = '';
+
+            cursosMostrados.forEach((curso, index) => {
+                var cursoHTML = `<div class="curso">
+            <h3>${curso.titulo}</h3>
+            <p>${curso.descripcion}</p>
+            <a href="./cursos/curso${index + 1}.html">Detalles del Curso</a>
+        </div>`;
+                listaCursos.innerHTML += cursoHTML;
+            });
+        }
+
+        function filtrarCursos() {
+            var textoBusqueda = document.getElementById('busqueda').value.toLowerCase();
+
+            if (textoBusqueda === '') {
+                mostrarCursos(cursos);
+            } else {
+                var cursosFiltrados = cursos.filter(curso =>
+                    curso.titulo.toLowerCase().includes(textoBusqueda) ||
+                    curso.descripcion.toLowerCase().includes(textoBusqueda)
+                );
+                mostrarCursos(cursosFiltrados);
+            }
+        }
+
+        // Muestra todos los cursos al cargar la página
+        window.onload = function () {
+            mostrarCursos(cursos);
+        };
+
+        // Encuentra el input de búsqueda por su ID
+        var inputBusqueda = document.getElementById('busqueda');
+
+        // Agrega un event listener para 'input' (cuando se ingresa texto)
+        inputBusqueda.addEventListener('input', function () {
+            filtrarCursos();
+        });
+    </script>
+</body>
+
+
+</html>

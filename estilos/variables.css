@@ -1,0 +1,20 @@
+:root {
+    /*Tipos de fuentes*/
+    --fuente-primaria: 'Fredoka', sans-serif;
+    /*Colores de fuentes*/
+    --color-primario: #f2f2f2;
+    --color-basico:black;
+    --color-texto-primario: #333333;
+    --color-borde-primario: #1a5276;
+    --color-texto-contenido: #ffffff;
+    /*Fondo texto con transparencia*/
+    --secondario-color: #7ac7e583;
+    /*Hover para los enlaces del header*/
+    --hover-secondario-color: #1a5276;
+    /*Botones color*/
+    --boton-color: #2980b9;
+    /*Hover boton*/
+    --boton-hover-color: #1a5276;
+    /*Imagen fondo*/
+    --imag-fondo: url('../fotos/foto1.jpg');
+}

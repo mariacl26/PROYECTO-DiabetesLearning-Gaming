@@ -1,0 +1,242 @@
+* {
+    font-family: var(--fuente-primaria);
+    margin: 0;
+    padding: 0;
+}
+
+.contenido {
+    background-size: cover;
+    padding: 40px;
+    color: var(--color-texto-contenido);
+    background-image: var(--imag-fondo);
+    background-attachment: fixed;
+}
+
+
+h1 {
+    font-style: italic;
+}
+
+p {
+    padding: 5px;
+}
+
+.justificado {
+    margin: 15px;
+    text-align: justify;
+    padding: 10px;
+    font-size: 1.15em;
+    background-color: var(--secondario-color);
+    border-radius: 15px;
+    backdrop-filter: blur(3px) grayscale(100%);
+
+
+}
+
+/* img {
+   
+} */
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--boton-color);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: var(--boton-hover-color);
+}
+
+h1 {
+    margin: 25px;
+
+}
+
+.contenedor-principal {
+    margin: 15px;
+    padding: 15px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 1em;
+    height: 100vh;
+}
+
+
+/*estilos para el menú desplegable */
+.cursos-titulo {
+    color: #fff;
+    text-align: center;
+    font-size: 2.1em;
+    padding: 20px 0;
+    background-color: var(--color-borde-primario);
+    border-bottom: 2px solid #fff;
+    text-transform: uppercase;
+}
+
+
+/*estilos para el menú desplegable */
+.menu-desplegable {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100%;
+    background-color: var(--color-texto-primario);
+    transition: right 0.5s ease;
+    z-index: 999;
+}
+
+/*contenido*/
+.contenido-menu {
+    display: flex;
+    flex-direction: column;
+    /* Mostrar los cursos en columna */
+    padding: 20px;
+}
+
+.contenido-menu a {
+    text-align: center;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: #efe2e2;
+    padding: 10px 0;
+    transition: color 0.3s ease;
+}
+
+.contenido-menu a:hover {
+    color: #b92929;
+}
+
+/*estilos para los enlaces del menú */
+
+.menu-desplegable.mostrar {
+    right: 0;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.menu-desplegable.mostrar .contenido-menu {
+    opacity: 1;
+}
+
+/*estilos para las barras del menú */
+.barras-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 25px;
+    cursor: pointer;
+}
+
+.barra1,
+.barra2,
+.barra3 {
+    width: 20px;
+    height: 3px;
+    border-radius: 5px;
+    background-color: var(--color-borde-primario);
+    transition: transform 0.3s ease;
+}
+
+
+
+/* Estilos para el botón de cerrar */
+.cerrar-menu {
+    text-align: center;
+    padding: 10px;
+    background-color: #761a1a;
+    color: var(--color-texto-contenido);
+    cursor: pointer;
+    border-bottom: 1px dashed var(--color-texto-contenido);
+
+}
+
+.cerrar-menu:hover {
+    background-color: #b92929;
+}
+
+/* Estilos para la capa semitransparente */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 998;
+}
+
+/* Media query para dispositivos con un ancho máximo de 768px, como tablets y móviles */
+@media screen and (max-width: 768px) {
+    .contenido {
+        padding: 20px;
+        /* Ajustar el padding del contenido para pantallas más pequeñas */
+        height: auto;
+        /* Cambiar la altura del contenido para permitir scroll en pantallas más pequeñas */
+    }
+
+    h1,
+    h3 {
+        color: #385a95;
+    }
+
+
+    .contenedor-principal {
+        width: 90%;
+        /* Reducir el ancho del contenedor principal en pantallas más pequeñas */
+    }
+
+    .menu-desplegable {
+        width: 80%;
+        /* Ajustar el ancho del menú desplegable en pantallas más pequeñas */
+    }
+}
+
+@media screen and (max-width: 568px) {
+
+    body {
+        overflow: visible;
+    }
+}
+
+/* Media query para pantallas más pequeñas, por ejemplo, dispositivos móviles */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    nav ul li {
+        margin-right: 10px;
+    }
+
+    .footer {
+        flex-direction: column;
+        /* Cambia la dirección a columna en pantallas más pequeñas */
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-seccion {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .footer-seccion ul li {
+        margin-bottom: 5px;
+    }
+
+    .info a {
+        font-size: 0.9em;
+    }
+}

@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+
+
+
+body {
+    font-family: var(--fuente-primaria);
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-primario);
+   
+}
+
+.contenedor {
+    margin: 0 auto;
+}
+
+header {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo {
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 10px;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--color-texto-primario);
+    padding: 10px;
+}
+
+
+.celda {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    border-bottom: 2px solid var(--color-borde-primario);
+
+}
+
+.velo {
+    width: 100%;
+    height: 100%;
+    background-color: var(--hover-secondario-color);
+    border: 3px solid var(--color-borde-primario);
+    position: absolute;
+    top: 100%;
+    transition: top 0.3s ease;
+}
+
+.info {
+    position: relative;
+    color: black;
+    transition: color .3s ease;
+}
+
+
+.info,
+.info a {
+    height: 100%;
+    width: 100%;
+    font-size: 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition: color .2s ease-in;
+    position: relative;
+
+}
+
+.celda :hover {
+    cursor: pointer;
+}
+
+.celda :hover .info,
+.celda:hover .info a {
+    color: var(--color-primario);
+
+}
+
+.celda:hover .velo {
+    top: 0;
+}
+
+
+/*FOOTER*/
+.footer {
+    background-color: var(--color-texto-primario);
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.footer-seccion {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-seccion h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: var(--color-texto-contenido);
+}
+
+.footer-seccion p {
+    color: #a4a3a3;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.footer-seccion ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-seccion ul li {
+    margin-bottom: 8px;
+}
+
+.footer-seccion ul li a {
+    font-size: 1.2em;
+    text-decoration: none;
+    color: var(--hover-secondario-color);
+    transition: color 0.3s ease;
+}
+
+.footer-seccion ul li a:hover {
+    color: var(--boton-color);
+}
+
+
+/* Media query para pantallas más pequeñas, por ejemplo, dispositivos móviles */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    nav ul li {
+        margin-right: 10px;
+    }
+
+    .footer {
+        flex-direction: column;
+        /* Cambia la dirección a columna en pantallas más pequeñas */
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-seccion {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .footer-seccion ul li {
+        margin-bottom: 5px;
+    }
+
+    .info a{
+        font-size: 0.9em;
+    }
+}

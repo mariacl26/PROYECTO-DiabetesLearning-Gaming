@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DiabetesLearning</title>
+    <link rel="stylesheet" href="./estilos/variables.css">
+    <link rel="stylesheet" href="./estilos/contenido.css">
+    <link rel="stylesheet" href="./estilos/general.css">
+    <link rel="icon" href="./fotos/analisis.svg" type="image/x-icon">
+    <style>
+        body {
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="contenedor">
+        <header>
+            <!-- <button id="cambio-modo">Cambiar modo</button> -->
+
+            <div class="logo">
+                <img src="./fotos/analisis.svg" width="30" height="30" viewBox="0 0 24 24"
+                    alt="Logo de DiabetesLearning">
+                DiabetesLearning
+            </div>
+
+            <nav>
+                <ul class="opciones">
+
+                    <li>
+                        <div class="celda">
+                            <div class="velo"></div>
+                            <div class="info"><a href="./noticias.html">Noticias</a></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="celda">
+                            <div class="velo"></div>
+                            <div class="info"><a href="./cursos.html">Cursos</a></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="celda">
+                            <div class="velo"></div>
+                            <div class="info"><a href="./sobre-nosotros.html">Sobre nosotros</a></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="celda">
+                            <div class="velo"></div>
+                            <div class="info"><a href="./registro.html">Registro</a></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="celda">
+                            <div class="velo"></div>
+                            <div class="info"><a href="./JUEGOv2.0/bienvenida.html">Juego</a></div>
+                        </div>
+                    </li>
+                </ul>
+
+            </nav>
+
+            <div class="barras-menu">
+                <div class="barra1"></div>
+                <div class="barra2"></div>
+                <div class="barra3"></div>
+            </div>
+
+
+        </header>
+
+        <div class="menu-desplegable">
+            <div class="cerrar-menu">Cerrar</div>
+            <div class="cursos-titulo">Cursos</div>
+            <div class="contenido-menu">
+                <a href="./cursos/curso1.html">Introducción a la Diabetes</a>
+                <a href="./cursos/curso2.html">Diabetes Tipo 1: Fundamentos</a>
+                <a href="#">Diabetes Tipo 2: Gestión</a>
+                <a href="#">Nutrición y Carbohidratos</a>
+                <a href="#">Uso del Glucagón</a>
+                <a href="#">Tecnología: CGM y Asa Cerrado</a>
+                <a href="#">Índice Glucémico y Alimentación</a>
+                <a href="#">Herramientas para el Autocuidado</a>
+                <a href="#">Prevención de Complicaciones</a>
+            </div>
+        </div>
+
+    </div>
+    <div class="contenido">
+        <div class="overlay"></div>
+        <div class="contenedor-principal">
+            <h1>"Tu camino hacia el bienestar con Cursos DiabetesLearning: Aprende, Comparte, Vive."</h1>
+
+            <h3>Descubre un mundo de conocimiento y bienestar en el manejo de la diabetes.</h3>
+            <div class="justificado">
+                <p>En DiabetesLearning, nuestro compromiso es empoderarte con las herramientas, la educación y
+                    el
+                    apoyo que necesitas para vivir una vida saludable y plena, a pesar de la diabetes.</p>
+
+                <p>Aquí, te adentrarás en un universo de recursos educativos de alta calidad, desde cursos
+                    especializados hasta lecciones interactivas, diseñados para que adquieras una comprensión
+                    profunda de la diabetes y las habilidades necesarias para su control efectivo.</p>
+
+                <p>Explora, aprende y descubre un mundo de posibilidades en DiabetesLearning. Descubre un mundo
+                    de
+                    conocimiento y bienestar en el manejo de la diabetes.</p>
+
+            </div>
+            <a href="./cursos.html" class="btn">VER CURSOS</a>
+        </div>
+    </div>
+
+    </div>
+</body>
+<script>
+    window.onload = function () {
+        // Este código se ejecuta cuando todos los recursos de la página se han cargado
+        const botonMenu = document.querySelector(".barras-menu");
+        const contenidoMenu = document.querySelector(".menu-desplegable");
+        const cerrarMenu = document.querySelector(".cerrar-menu");
+        const overlay = document.querySelector(".overlay");
+        const contenidoPrincipal = document.querySelector(".contenido-principal");
+
+        // Evento de clic en el botón de apertura del menú
+        botonMenu.addEventListener("click", function () {
+            contenidoMenu.style.right = "0";
+            overlay.style.display = "block";
+        });
+
+        // Evento de clic en el botón de cierre del menú
+        cerrarMenu.addEventListener("click", function () {
+            contenidoMenu.style.right = "-100vw";
+            overlay.style.display = "none";
+        });
+
+        // Evento de clic en el botón de apertura del menú (segunda acción)
+        botonMenu.addEventListener("click", function () {
+            contenidoMenu.classList.toggle("mostrar");
+            overlay.classList.toggle("mostrar-overlay");
+        });
+
+    };
+
+</script>
+
+</html>

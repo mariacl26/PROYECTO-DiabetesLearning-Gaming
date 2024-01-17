@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Equipo - DiabetesLearning</title>
+    <link rel="stylesheet" href="./estilos/variables.css">
+    <link rel="stylesheet" href="./estilos/contenido.css">
+    <link rel="stylesheet" href="./estilos/general.css">
+    <link rel="icon" href="./fotos/analisis.svg" type="image/x-icon">
+    <style>
+        .intro {
+            padding-top: 30px;
+            text-align: center;
+            /* margin-bottom: 20px; */
+        }
+
+        .tarjetas {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+            overflow: hidden;
+            height: 40vh;
+        }
+
+
+        .tarjeta {
+            background-color: #ffcc00;
+            padding: 20px;
+            border-radius: 8px;
+            width: 31%;
+            margin: 5px;
+            text-align: center;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: fit-content;
+        }
+
+        .tarjeta img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .tarjeta h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .tarjeta p {
+            color: #666;
+            margin-bottom: 10px;
+            /* Añadir un poco de margen inferior para el texto */
+            font-size: 0.8em;
+        }
+
+        .botones {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .boton {
+            background-color: #1e2763;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        .boton:hover {
+            background-color: #4856b4;
+        }
+
+        /* Estilos para el desplazamiento horizontal */
+        .tarjetas .contenido-tarjetas {
+            display: flex;
+            padding: 10px;
+            animation: desplazamiento 50s linear infinite;
+            white-space: nowrap;
+            width: 300%; 
+
+            
+        }
+
+        @keyframes desplazamiento {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-100%);
+                /* Mueve las tarjetas a la izquierda */
+            }
+
+
+        }
+
+        .logo a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .tel {
+            border-radius: 5px;
+            background-color: #f5f6e1;
+        }
+
+        .email {
+            border: 1px solid;
+            border-radius: 5px;
+            background-color: #f0e1a7;
+        }
+
+        footer {
+            height: 25vh;
+        }
+
+        .mostrar {
+            margin: 50px auto;
+            background-color: #66666646;
+            width: 41vw;
+            height: 41vh;
+            border-radius: 5px;
+        }
+
+        @media screen and (max-width: 768px) {
+            footer {
+                height: 45vh;
+            }
+
+            .tarjeta h3 {
+                font-size: 1.1em;
+            }
+
+            .tarjeta p {
+                font-size: .7em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <header>
+            <div class="logo">
+                <img src="./fotos/analisis.svg" width="30" height="30" viewBox="0 0 24 24"
+                    alt="Logo de DiabetesLearning">
+                <a href="./index.html">DiabetesLearning</a>
+            </div>
+
+            <nav>
+                <ul class="opciones">
+                    <li>
+                        <div class="celda">
+                            <div class="velo"></div>
+                            <div class="info"><a href="./index.html">Inicio</a></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="celda">
+                            <div class="velo"></div>
+                            <div class="info"><a href="./noticias.html">Noticias</a></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="celda">
+                            <div class="velo"></div>
+                            <div class="info"><a href="./cursos.html">Cursos</a></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="celda">
+                            <div class="velo"></div>
+                            <div class="info"><a href="./registro.html">Registro</a></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="celda">
+                            <div class="velo"></div>
+                            <div class="info"><a href="./JUEGOv2.0/bienvenida.html">Juego</a></div>
+                        </div>
+                    </li>
+                </ul>
+
+            </nav>
+
+        </header>
+
+
+        <section class="equipo">
+            <div class="intro">
+                <h2>Quiénes Somos</h2>
+                <p>Somos un equipo comprometido con brindar información relevante y útil sobre el manejo de la diabetes.
+                </p>
+            </div>
+
+            <div class="mostrar">
+                <div class="tarjetas">
+                    <div class="contenido-tarjetas">
+                        <div class="tarjeta">
+                            <img src="fotos/integrante4.jpg" alt="Foto de la Especialista en Marketing Digital">
+                            <h3>Valentina García</h3>
+                            <p>Especialista en estrategias digitales</p>
+                            <p class="tel">Telefono: +34 698 23 12 56</p>
+                            <p class="email">Email: valen@gmail.com</p>
+                        </div>
+                        <div class="tarjeta">
+                            <img src="fotos/integrante5.jpg" alt="Foto del Gerente de Proyectos">
+                            <h3>Juan Martínez</h3>
+                            <p>Encargado de coordinar iniciativas clave</p>
+                            <p class="tel">Telefono: +34 644 03 92 56</p>
+                            <p class="email">Email:juanmc@gmail.com</p>
+
+                        </div>
+                        <div class="tarjeta">
+                            <img src="fotos/integrante7.jpg"
+                                alt="Foto del Desarrollador de la Aplicación Web sobre Diabetes">
+                            <h3>Carlos Fernández</h3>
+                            <p>Experto en el diseño y desarrollo WEB
+                            </p>
+                            <p class="tel">Telefono: +34 693 02 14 50</p>
+                            <p class="email">Email: carls@gmail.com</p>
+
+
+                        </div>
+                        <div class="tarjeta">
+                            <img src="fotos/integrante8.jpg" alt="Foto de la Diseñadora de Experiencia de Usuario (UX)">
+                            <h3>Luisa Rodríguez</h3>
+                            <p>Diseñadora de Experiencia de Usuario
+                            </p>
+                            <p class="tel">Telefono: +34 672 30 19 88</p>
+                            <p class="email">Email: ls77@gmail.com</p>
+
+                        </div>
+                        <div class="tarjeta">
+                            <img src="fotos/integrante6.jpg" alt="Foto del Consultor Especializado en Diabetes">
+                            <h3>Ramón Sánchez</h3>
+                            <p>Consultor Especializado en Diabetes
+                            </p>
+                            <p class="tel">Telefono: +34 629 33 11 44</p>
+                            <p class="email">Email: ramonsancz44@gmail.com</p>
+
+                        </div>
+                        <div class="tarjeta">
+                            <img src="fotos/integrante2.jpg" alt="Foto del Consultor Especializado en Diabetes">
+                            <h3>Carla Pérez</h3>
+                            <p>Jefa de Proyecto
+                            </p>
+                            <p class="tel">Telefono: +34 694 03 81 57</p>
+                            <p class="email">Email: carla83@gmail.com</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <footer class="footer">
+            <div class="footer-seccion">
+                <h3>Acerca de Nosotros</h3>
+                <p>Descubre nuestra misión y visión en DiabetesLearning. Conoce al equipo que trabaja para brindarte
+                    información relevante y útil sobre el manejo de la diabetes.</p>
+            </div>
+
+            <div class="footer-seccion">
+                <h3>Contáctanos</h3>
+                <p>¿Tienes preguntas o comentarios? ¡No dudes en contactarnos! Estamos aquí para ayudarte en tu viaje
+                    hacia un mejor control de la diabetes.</p>
+                <p> +34 658 23 15 42 </p>
+                <p> diabeteslearning@gmail.com</p>
+            </div>
+            <div class="footer-seccion">
+                <h3>Enlaces</h3>
+                <ul>
+                    <li><a href="./politica-privacidad.html">Política de Privacidad</a></li>
+                    <li><a href="./terminos-cond.html">Términos y Condiciones</a></li>
+                </ul>
+            </div>
+        </footer>
+        <script>
+            // js para activar la animación de desplazamiento
+            window.onload = function () {
+                // Busca un elemento con la clase 'contenido-tarjetas'
+                const tarjetasContenido = document.querySelector('.contenido-tarjetas');
+
+                // Si se encuentra el elemento
+                if (tarjetasContenido) {
+                    // Aplica una animación llamada 'desplazamiento' al elemento encontrado
+                    tarjetasContenido.style.animation = 'desplazamiento 50s linear infinite';
+                }
+            }
+
+        </script>
+
+</body>
+
+</html>

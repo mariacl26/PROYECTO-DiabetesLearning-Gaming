@@ -1,0 +1,191 @@
+.galeria-noticias {
+    white-space: wrap;
+
+}
+
+.noticia {
+    display: inline-block;
+    width: 190px;
+    margin-right: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.noticia img {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+}
+.noticia .hover-info a {
+    background-color: transparent;
+}
+.noticia .hover-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.451);
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.noticia:hover img {
+    transform: scale(1.1);
+}
+
+.noticia:hover .hover-info {
+    opacity: 1;
+}
+
+/* Estilos para texto en la galería */
+.noticia .hover-info h3 {
+    color: white;
+    margin: 0;
+    text-align: center;
+    padding: 0.8em;
+}
+
+
+.carrusel-noticias {
+    display: none;
+    border-radius: 5px;
+
+}
+
+
+/**/
+.carrusel-noticias .noticia {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(23, 19, 91, 0.318);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 500px;
+}
+
+.carrusel-noticias .noticia img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    transform: none;
+}
+
+.carrusel-noticias .noticia h3 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.carrusel-noticias .noticia p {
+    margin: 0;
+    font-size: 1em;
+
+    text-align: justify;
+}
+
+.carrusel-noticias .noticia a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.carrusel-noticias .noticia a:hover {
+    text-decoration: underline;
+}
+
+.carrusel-galeria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 800px;
+    /* Ajusta el ancho máximo según tus preferencias */
+    padding: 20px;
+}
+
+
+.boton-vista-galeria,
+.boton-vista-carrusel {
+    width: fit-content;
+    display: block;
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.boton-vista-galeria:hover,
+.boton-vista-carrusel:hover {
+    background-color: #0056b3;
+    border-radius: 5px;
+    
+}
+
+.botones-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.oculto {
+    display: none;
+}
+
+/* Estilos para los botones de carrusel */
+.botones-carrusel button {
+    background-color: transparent;
+    color: #3498db;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    font-family: 'Fredoka', sans-serif;
+
+}
+
+/* Estilos al pasar el cursor por encima */
+.botones-carrusel button:hover {
+    background-color: #3498db91;
+    color: #fff;
+}
+
+/* Estilos para el botón "Siguiente" */
+#siguiente {
+    float: right;
+}
+
+/* Estilos para el botón "Anterior" */
+#anterior {
+    float: left;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .carrusel-noticias .noticia {
+        width: 50%;
+    }
+}

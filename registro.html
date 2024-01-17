@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - DiabetesLearning</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./estilos/noticias.css">
+    <link rel="stylesheet" href="./estilos/variables.css">
+    <link rel="stylesheet" href="./estilos/general.css">
+    <link rel="stylesheet" href="./estilos/carrusel.css">
+    <link rel="icon" href="./fotos/analisis.svg" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('./fotos/fondo-reg1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+   
+
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .registro-formulario {
+            background: rgba(255, 255, 255, 0.615);
+            padding: 20px;
+            border-radius: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 400px;
+            height: 450px;
+            margin: 50px auto;
+            text-align: center;
+            backdrop-filter:blur(5px);
+        }
+
+        .registro-formulario h1 {
+            margin-bottom: 20px;
+        }
+
+        .registro-formulario form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .registro-formulario input[type="number"],
+        .registro-formulario input[type="text"],
+        .registro-formulario input[type="email"],
+        .registro-formulario input[type="password"] {
+            font-family: 'Fredoka', sans-serif;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 30px;
+        }
+
+        .registro-formulario button {
+            padding: 10px 20px;
+            background-color: #2980b9;
+            color: #fdfdfd;
+            border: none;
+            margin-top: 10px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-family: 'Fredoka', sans-serif;
+
+        }
+
+        .registro-formulario button:hover {
+            background-color: #1a5276;
+        }
+
+        /* Estilos para el select */
+        .registro-formulario select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 30px;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>');
+            background-repeat: no-repeat;
+            background-position-x: 95%;
+            color: #333;
+            background-position-y: 50%;
+            font-family: 'Fredoka', sans-serif;
+        }
+
+        /* Estilos para las opciones del select */
+        .registro-formulario select option {
+            background-color: #b5d3dd;
+            color: #333;
+        }
+
+        /* Media query para ajustar el botón de registro en pantallas más pequeñas */
+        @media only screen and (max-width: 768px) {
+
+            .registro-formulario h1 {
+                font-size: 1.2em;
+            }
+
+            .registro-formulario {
+                width:fit-content;
+                height: fit-content;
+            }
+
+            .registro-formulario form {
+                margin-left: 60px;
+            }
+
+            .registro-formulario input[type="number"],
+            .registro-formulario input[type="text"],
+            .registro-formulario input[type="email"],
+            .registro-formulario input[type="password"],
+            .registro-formulario select {
+                background-image: none;
+                width: fit-content;
+                padding: 8px;
+
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="./fotos/analisis.svg" width="30" height="30" viewBox="0 0 24 24" alt="Logo de DiabetesLearning">
+            <a href="./index.html">DiabetesLearning</a>
+        </div>
+
+        <nav>
+            <ul class="opciones">
+                <li>
+                    <div class="celda">
+                        <div class="velo"></div>
+                        <div class="info"><a href="./index.html">Inicio</a></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="celda">
+                        <div class="velo"></div>
+                        <div class="info"><a href="./noticias.html">Noticias</a></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="celda">
+                        <div class="velo"></div>
+                        <div class="info"><a href="./cursos.html">Cursos</a></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="celda">
+                        <div class="velo"></div>
+                        <div class="info"><a href="./sobre-nosotros.html">Sobre nosotros</a></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="celda">
+                        <div class="velo"></div>
+                        <div class="info"><a href="./JUEGOv2.0/bienvenida.html">Juego</a></div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <div class="fondo">
+    <main>
+        <div class="registro-formulario">
+            <h1>Registrarse en DiabetesLearning</h1>
+            <form id="registroForm">
+
+                <select id="tipoDiabetes" required>
+                    <option value="" disabled selected>Selecciona un tipo de diabetes</option>
+                    <option value="Tipo 1">Tipo 1</option>
+                    <option value="Tipo 2">Tipo 2</option>
+                    <option value="Gestacional">Gestacional</option>
+                    <option value="Ninguna">Ninguna, solo quiero formarme</option>
+                </select>
+                <input type="text" id="nombreCompleto" placeholder="Nombre completo" required>
+                <input type="text" id="dni" placeholder="DNI/NIF" required>
+                <input type="email" id="correoElectronico" placeholder="Correo electrónico" required>
+                <input type="password" id="contrasena" placeholder="Contraseña" required>
+                <button type="submit" id="btnRegistro">Registrarse</button>
+            </form>
+            <p id="mensajeRegistro" style="display: none;">¡Registro exitoso!</p>
+        </div>
+    </main>
+</div>
+    <footer class="footer">
+        <div class="footer-seccion">
+            <h3>Acerca de Nosotros</h3>
+            <p>Descubre nuestra misión y visión en DiabetesLearning. Conoce al equipo que trabaja para brindarte
+                información relevante y útil sobre el manejo de la diabetes.</p>
+        </div>
+
+        <div class="footer-seccion">
+            <h3>Contáctanos</h3>
+            <p>¿Tienes preguntas o comentarios? ¡No dudes en contactarnos! Estamos aquí para ayudarte en tu viaje
+                hacia un mejor control de la diabetes.</p>
+            <p> +34 658 23 15 42 </p>
+            <p> diabeteslearning@gmail.com</p>
+        </div>
+
+        <div class="footer-seccion">
+            <h3>Enlaces</h3>
+            <ul>
+                <li><a href="./politica-privacidad.html">Política de Privacidad</a></li>
+                <li><a href="./terminos-cond.html">Términos y Condiciones</a></li>
+             </ul>
+        </div>
+    </footer>
+
+</body>
+<script>
+    window.onload = function () {
+        document.getElementById('registroForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Evita que el formulario se envíe
+
+            // Obtener los valores del formulario
+            const nombre = document.getElementById('nombreCompleto').value;
+            const email = document.getElementById('correoElectronico').value;
+            const contrasena = document.getElementById('contrasena').value;
+
+
+            // Mostrar mensaje de registro exitoso
+            const mensajeRegistro = document.getElementById('mensajeRegistro');
+            mensajeRegistro.style.display = 'block';
+
+        });
+
+    }
+</script>
+
+</html>

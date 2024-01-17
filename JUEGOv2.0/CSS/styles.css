@@ -64,8 +64,8 @@ h1 {
 }
 
 .opciones img {
-    width: 170px;
-    height: 170px;
+    width: 210px;
+    height: 210px;
     cursor: pointer;
     border-radius: 10px;
     border: 3px solid transparent;
@@ -164,6 +164,7 @@ div .dropzone img {
 }
 
 .option-text {
+    margin: 0 auto;
     background-color: #297fb9c7;
     border-radius: 5px;
     color: #ffffff;
